@@ -1,0 +1,25 @@
+/* .color1 { #dcab7b };
+.color2 { #fcbcbc };
+.color3 { #5c2a35 };
+.color4 { #a4765e };
+.color5 { #d6b8b9 }; */
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    /* background-color: #fcbcbc6e !important; */
+}
+
+main {
+    background: radial-gradient(circle, rgba(252, 188, 188, 0.129) 50%, rgba(204, 172, 180, 0.593) 100%);
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+#navFarmacia {
+    background: linear-gradient(0deg, rgba(204, 172, 180, 1) 0%, rgba(237, 183, 186, 1) 20%, rgba(252, 188, 188, 1) 100%);
+    /* background: radial-gradient(circle, rgba(252, 188, 188, 1) 0%, rgba(204, 172, 180, 1) 100%); */
+    /* background: linear-gradient(90deg, rgba(204, 172, 180, 1) 0%, rgba(252, 188, 188, 1) 30%, rgba(252, 188, 188, 1) 70%, rgba(204, 172, 180, 1) 100%); */
+    border-bottom: ridge 2px #ccacb4;
+}
