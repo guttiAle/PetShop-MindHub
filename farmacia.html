@@ -46,34 +46,39 @@
         </nav>
     </header>
     <main id="app">
-        <div class="banner-farmacia d-flex justify-content-center align-items-center" style="height: 18rem;">
-            <!-- <img src="./assets/image/foto-farmacia2.png" alt="banner-farmacia"> -->
+        <div class="banner-farmacia d-flex justify-content-center align-items-center m-auto"
+            style="height: 24vw; width: 90vw;">
         </div>
-
         <div class="p-4 d-flex justify-content-around align-items-center">
-            <div class="d-flex justify-content-around align-items-center flex-wrap gap-1">
+            <div class="d-flex justify-content-around align-items-center flex-wrap gap-1" style="width: 90vw;">
                 <div v-for="tarjeta of tarjetasFarmacia" class="card"
-                    style="width: 19rem; height: 26rem; align-items: center; justify-content: space-between;">
+                    style="width: 19rem; height: 30rem; align-items: center; justify-content: space-between;">
                     <div class="d-flex align-items-center justify-content-center">
                         <img :src="tarjeta.imagen" class="card-img-top" :alt="tarjeta.producto">
                     </div>
                     <div class="d-flex align-items-center gap-2 flex-column mb-2 clase-tarjeta" style="width: 100%;">
-                        <h5 class="card-title">{{tarjeta.producto}}</h5>
+                        <h5 class="card-title" style="font-weight: bolder;">{{tarjeta.producto}}</h5>
                         <div class="d-flex gap-3 align-items-center">
                             <div v-if="tarjeta.disponibles >= 5" style="display: flex; gap: 2rem; align-items: center;">
-                                <p style="margin: 0;">Stock: {{tarjeta.disponibles}}</p>
-                                <img src="./assets/image/logo-carrito.png" alt="" style="width: 2rem;">
+                                <p style="margin: 0; font-size: smaller;">Stock:{{tarjeta.disponibles}}</p>
                             </div>
                             <div v-else-if="tarjeta.disponibles == 0">
-                                <p style="color: red; margin: 0;"> No quedan disponibles</p>
+                                <p style="color: grey; margin: 0; "> No quedan disponibles</p>
                             </div>
                             <div v-else-if="5 > tarjeta.disponibles"
                                 style="display: flex; gap: 1rem; align-items: center;">
-                                <p style="margin: 0;">Stock: {{tarjeta.disponibles}}</p>
-                                <p style="border: 1px solid red; border-radius: 10px; padding: 0.2rem; margin: 0;">
+                                <p style="border: 2px solid red; border-radius: 10px; padding: 0.2rem; margin: 0;">
                                     Ultimas unidades</p>
-                                <img src="./assets/image/logo-carrito.png" alt="" style="width: 2rem;">
                             </div>
+                            <a :href="'./details.html?id='+tarjeta._id" class="btn btn-light"
+                                style="font-weight: bold;">+INFO</a>
+                        </div>
+                        <div v-if="tarjeta.disponibles > 0">
+                            <input type="checkbox" class="btn-check" :id="tarjeta.producto">
+                            <label class="btn btn-light" :for="tarjeta.producto">
+                                ${{ tarjeta.precio }}
+                                <img src="./assets/image/logo-carrito.png" alt="" style="width: 2rem;">
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -81,7 +86,7 @@
         </div>
     </main>
     <footer class="d-flex justify-content-around p-2 flex-wrap">
-        <div id="caja-tarjetas">
+        <div id="caja-tarjetas" style="width: 20rem;">
             <img src="./assets/image/tarjeta1.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta2.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta3.png" alt="..." class="tarjetas">
@@ -93,8 +98,8 @@
             <img src="./assets/image/tarjeta8.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta9.png" alt="..." class="tarjetas">
         </div>
-        <div class="d-flex flex-column">
-            <div>
+        <div class="d-flex flex-column" style="width: 20rem;">
+            <div class="d-flex justify-content-center">
                 <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -118,13 +123,13 @@
                             d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
                     </svg></a>
             </div>
-            <form action="./show_data.html">
-                <label for="suscripcion">Recibi nuestras novedades</label>
+            <form action="./show_data.html" style="display: flex; justify-content: center; flex-direction: column;">
+                <label for="suscripcion" style="justify-self: center;">Recibi nuestras novedades</label>
                 <input type="email" name="suscripcion" id="suscripcion" placeholder="name@example.com" required>
                 <input type="submit" value="Enviar">
             </form>
         </div>
-        <p>Profesor Utonio y las chicas Super Poderosas</p>
+        <pstyle="width: 20rem;">Profesor Utonio y las chicas Super Poderosas</pstyle=>
     </footer>
 
 </body>
