@@ -10,7 +10,8 @@
 }
 
 main {
-    /* background: #dcac7ca1; */
+    background: #dcac7ca1;
+    /* background-color: #fcbcbc87 !important; */
     background-color: #dcac7b2a;
 }
 
@@ -20,14 +21,21 @@ main {
 
 #navFarmacia {
     background-color: #fcbcbc !important;
-    -webkit-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
+    /* -webkit-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
     -moz-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
-    box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
-    /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
+    box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1); */
+    background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%);
+    /* border-bottom: 4px solid #bfa1a9; */
 }
 
 .banner-farmacia {
-    background-color: #dcac7c;
+    background-color: white;
+    /* background-color: #dcac7c; */
+    background-image: url(../image/foto-farmacia2.png);
+    background-size: 40%;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
 }
 
 #banner-1 {
@@ -51,6 +59,9 @@ footer {
     -webkit-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
     -moz-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
     box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
+    /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
+
+
 }
 
 @media only screen and (min-width: 1024px) {
