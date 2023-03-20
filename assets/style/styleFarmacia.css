@@ -10,7 +10,7 @@
 }
 
 main {
-    background: radial-gradient(circle, rgba(252, 188, 188, 0.129) 50%, rgba(204, 172, 180, 0.593) 100%);
+    background: #dcac7ca1;
 }
 
 .nav-link:hover {
@@ -18,8 +18,38 @@ main {
 }
 
 #navFarmacia {
-    background: linear-gradient(0deg, rgba(204, 172, 180, 1) 0%, rgba(237, 183, 186, 1) 20%, rgba(252, 188, 188, 1) 100%);
-    /* background: radial-gradient(circle, rgba(252, 188, 188, 1) 0%, rgba(204, 172, 180, 1) 100%); */
-    /* background: linear-gradient(90deg, rgba(204, 172, 180, 1) 0%, rgba(252, 188, 188, 1) 30%, rgba(252, 188, 188, 1) 70%, rgba(204, 172, 180, 1) 100%); */
-    border-bottom: ridge 2px #ccacb4;
+    background-color: #fcbcbc !important;
+    -webkit-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
+    -moz-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
+    box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
+    /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
+}
+
+#banner-1 {
+    background-color: #E9EDF0;
+}
+
+#banner-2 {
+    background-color: #ECD2CA;
+}
+
+.tarjetas {
+    height: 2rem
+}
+
+#caja-tarjetas {
+    width: 30vh;
+}
+
+footer {
+    background-color: #fcbcbc !important;
+    -webkit-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
+    -moz-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
+    box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
+}
+
+@media only screen and (min-width: 1024px) {
+    form {
+        width: 50vh;
+    }
 }
