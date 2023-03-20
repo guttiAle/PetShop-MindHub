@@ -46,9 +46,7 @@
         </nav>
     </header>
     <main id="app">
-        <div class="banner-farmacia d-flex justify-content-center align-items-center m-auto"
-            style="height: 24vw; width: 90vw;">
-        </div>
+        <img src="./assets/image/banner-farmacia.png" alt="" class="img-fluid banner-farmacia">
         <div class="p-4 d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-1" style="width: 90vw;">
                 <div v-for="tarjeta of tarjetasFarmacia" class="card"
@@ -85,8 +83,9 @@
             </div>
         </div>
     </main>
-    <footer class="d-flex justify-content-around p-2 flex-wrap">
-        <div id="caja-tarjetas" style="width: 20rem;">
+    <footer class="d-flex justify-content-around p-2 flex-wrap gap-2">
+        <div id="caja-tarjetas" style="width: 42vh;">
+            <p style="text-align: center;">Metodos de pago:</p>
             <img src="./assets/image/tarjeta1.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta2.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta3.png" alt="..." class="tarjetas">
@@ -98,7 +97,7 @@
             <img src="./assets/image/tarjeta8.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta9.png" alt="..." class="tarjetas">
         </div>
-        <div class="d-flex flex-column" style="width: 20rem;">
+        <div class="d-flex flex-column" style="width: 42vh;">
             <div class="d-flex justify-content-center">
                 <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24"
@@ -123,13 +122,51 @@
                             d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
                     </svg></a>
             </div>
-            <form action="./show_data.html" style="display: flex; justify-content: center; flex-direction: column;">
-                <label for="suscripcion" style="justify-self: center;">Recibi nuestras novedades</label>
-                <input type="email" name="suscripcion" id="suscripcion" placeholder="name@example.com" required>
-                <input type="submit" value="Enviar">
+            <form action="./show_data.html" class="d-flex flex-column" style="width: 42vh;">
+                <label for="suscripcion" class="d-flex justify-content-center">Recibi nuestras novedades</label>
+                <input type="email" id="suscripcion" placeholder="nombre@ejemplo.com" name="suscripcion" required>
+                <!-- Button trigger modal -->
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalSuscripcion">
+                    Enviar
+                </button>
             </form>
+            <!-- Modal -->
+            <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Suscripcion Exitosa</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Gracias por tu suscripcion. A partir de ahora recibiras todas nuestras novedades.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <pstyle="width: 20rem;">Profesor Utonio y las chicas Super Poderosas</pstyle=>
+        <div class="d-flex flex-column align-items-center" style="width: 42vh;">
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-untonio.png" alt="" style="width: 3rem;">
+                Agustin M.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-bombon.png" alt="" style="width: 3rem;">
+                Eugenia G.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-burbuja.png" alt="" style="width: 3rem;">
+                Jennifer M.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-bellota.png" alt="" style="width: 3rem;padding: 0.5rem;">
+                Facundo R.
+            </p>
+        </div>
     </footer>
 
 </body>

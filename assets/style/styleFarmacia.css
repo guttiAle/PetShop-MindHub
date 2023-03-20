@@ -6,16 +6,10 @@
 * {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    /* background-color: #fcbcbc6e !important; */
 }
 
 main {
-    /* background: #dcac7ca1; */
-    /* background-color: #fcbcbc4f; */
-    /* background-color: #dcac7b52; */
-    /* background: radial-gradient(circle, rgba(245, 172, 80, 0.5429795209099264) 0%, rgba(159, 125, 89, 0.5289739186690301) 100%); */
     background-color: #dcac7b25;
-    /* background: linear-gradient(0deg, rgba(161, 126, 89, 0.5) 0%, rgba(245, 172, 80, 0.5) 50%, rgba(161, 126, 89, 0.4981615937390581) 100%); */
 }
 
 .nav-link:hover {
@@ -23,37 +17,15 @@ main {
 }
 
 .card {
-    /* -webkit-box-shadow: 7px 7px 20px 0px rgba(220, 172, 123, 0.7);
-    -moz-box-shadow: 7px 7px 20px 0px rgba(220, 172, 123, 0.7);
-    box-shadow: 7px 7px 20px 0px rgba(220, 172, 123, 0.7); */
     border: solid grey 1px;
 }
 
-header {
-    position: sticky;
-}
-
 #navFarmacia {
-    background-color: #fcbcbc !important;
+    background-color: #fcbcbc6e !important;
     border-bottom: #ccacb4 double 4px;
-    /* -webkit-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
-    -moz-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
-    box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1); */
-    /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
-    /* border-bottom: 4px solid #bfa1a9; */
 }
 
 .banner-farmacia {
-    background-color: white;
-    /* background-color: #dcac7c; */
-    background-size: contain;
-    background-image: url(../image/foto-farmacia2.png);
-    background-size: 40%;
-    background-position-x: 50%;
-    background-position-y: 100%;
-    background-repeat: no-repeat;
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
     -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
     box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
@@ -76,13 +48,8 @@ header {
 }
 
 footer {
-    background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%);
-    /* background: linear-gradient(0deg, rgba(252, 188, 188, 1) 0%, rgba(237, 183, 186, 1) 80%, rgba(204, 172, 180, 1) 100%); */
-    /* background-color: #fcbcbc;
-    -webkit-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
-    -moz-box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1);
-    box-shadow: inset 0px 57px 54px -63px rgba(204, 172, 180, 1); */
-    /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
+    border-top: #ccacb4 double 4px;
+    background-color: #fcbcbc6e;
 }
 
 @media only screen and (min-width: 1024px) {
