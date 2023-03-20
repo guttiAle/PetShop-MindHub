@@ -46,6 +46,10 @@
         </nav>
     </header>
     <main id="app">
+        <div class="banner-farmacia d-flex justify-content-center align-items-center">
+            <img src="./assets/image/foto-farmacia.png" alt="banner-farmacia">
+        </div>
+
         <div class="p-4 d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-1">
                 <div v-for="tarjeta of tarjetasFarmacia" class="card"
@@ -116,7 +120,7 @@
             </div>
             <form action="./show_data.html">
                 <label for="suscripcion">Recibi nuestras novedades</label>
-                <input type="email" name="suscripcion" id="suscripcion" required>
+                <input type="email" name="suscripcion" id="suscripcion" placeholder="name@example.com" required>
                 <input type="submit" value="Enviar">
             </form>
         </div>

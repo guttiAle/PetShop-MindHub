@@ -10,7 +10,8 @@
 }
 
 main {
-    background: #dcac7ca1;
+    /* background: #dcac7ca1; */
+    background-color: #dcac7b2a;
 }
 
 .nav-link:hover {
@@ -23,6 +24,10 @@ main {
     -moz-box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
     box-shadow: inset 0px -57px 54px -63px rgba(204, 172, 180, 1);
     /* background: linear-gradient(0deg, rgba(204, 172, 180, 0.838) 0%, rgba(237, 183, 186, 0.849) 20%, rgba(252, 188, 188, 0.826) 100%); */
+}
+
+.banner-farmacia {
+    background-color: #dcac7c;
 }
 
 #banner-1 {
