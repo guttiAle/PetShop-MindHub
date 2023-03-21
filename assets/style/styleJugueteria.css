@@ -1,0 +1,62 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+main {
+    background-color: #dcac7b25;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    border: solid grey 1px;
+}
+
+#cajaDeInicio {
+    background-color: #fcbcbc6e !important;
+    border-bottom: #ccacb4 double 4px;
+}
+
+.banner-busqueda {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+}
+
+#banner-1 {
+    background-color: #E9EDF0;
+}
+
+#banner-2 {
+    background-color: #ECD2CA;
+}
+
+.tarjetas {
+    height: 2rem
+}
+
+#caja-tarjetas {
+    width: 30vh;
+}
+
+footer {
+    border-top: #ccacb4 double 4px;
+    background-color: #fcbcbc6e;
+}
+
+.banner-busqueda {
+    background-image: url(../image/banner-busqueda.png);
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+}
+
+@media only screen and (min-width: 1024px) {
+    form {
+        width: 50vh;
+    }
+}
