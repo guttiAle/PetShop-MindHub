@@ -39,8 +39,9 @@
                         <a class="nav-link" href="#">Contacto</a>
                         <a class="nav-link active" href="#">Farmacia</a>
                         <a class="nav-link" href="#">Juguetes</a>
-                        <!-- <a href=""><img src="./assets/image/logo-carrito.png" alt="" style="width: 2.5rem;"></a> -->
-                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border: none; background-color: transparent;"><img src="./assets/image/logo-carrito.png" alt="" style="height: 2rem;"></button>
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight" style="border: none; background-color: transparent;"><img
+                                src="./assets/image/logo-carrito.png" alt="" style="height: 2rem;"></button>
                     </div>
                 </div>
             </div>
@@ -48,11 +49,18 @@
     </header>
     <main id="app">
         {{handleFav}}
-        <img src="./assets/image/banner-farmacia.png" alt="" class="img-fluid banner-farmacia">
-        <div class="p-3 d-flex flex-wrap justify-content-center">
-            <input type="text" class="form-control" name="nombreEvento" v-model="valorBusqueda" placeholder="Ej: Collar" style="width: 30vh; margin-right: 1vh;">
-            <button class="btn btn-outline-success" type="submit">🔍</button>
-            {{filtro}}
+        <div class="d-flex justify-content-center">
+            <img src="./assets/image/banner-farmacia.png" alt="" class="img-fluid banner-jugueteria"
+                style="width: 90vw;">
+        </div>
+        <div class="d-flex justify-content-center m-auto banner-busqueda"
+            style="height: 5rem; background-color: gray; width: 90vw; border-bottom-right-radius: 2rem; border-bottom-left-radius: 2rem;">
+            <div class="input-group align-items-center" style="width: 15rem;" id="content-search">
+                <div class="input-group-text" id="btnGroupAddon">🔎</div>
+                <input v-model="valorBusqueda" type="text" class="form-control" id="search-bar"
+                    placeholder="Ejemplo: pelota" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                {{filtro}}
+            </div>
         </div>
         <div class="p-4 d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-1" style="width: 90vw;">
@@ -76,12 +84,15 @@
                                     Ultimas unidades</p>
                             </div>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-weight: bold;" v-on:click="mostrarDetails(tarjeta.producto)">
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" style="font-weight: bold;"
+                                v-on:click="mostrarDetails(tarjeta.producto)">
                                 +INFO
                             </button>
                         </div>
                         <div v-if="tarjeta.disponibles > 0">
-                            <input type="checkbox" class="btn-check" :id="'card-'+tarjeta.producto" v-model="favoritos" :value="tarjeta.producto">
+                            <input type="checkbox" class="btn-check" :id="'card-'+tarjeta.producto" v-model="favoritos"
+                                :value="tarjeta.producto">
                             <label class="btn btn-light" :for="'card-'+tarjeta.producto">
                                 ${{ tarjeta.precio }}
                                 <img src="./assets/image/logo-carrito.png" alt="" style="width: 2rem;">
@@ -90,30 +101,36 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bolder;">{{listaModalDetalles.producto}}</h1>
+                        <div class="modal-header" style="background-color: #fcbcbc6e;">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bolder;">
+                                {{listaModalDetalles.producto}}</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body d-flex justify-content-center flex-column align-items-center" >
-                            <img :src="listaModalDetalles.imagen" :alt="listaModalDetalles.producto" style="width: 80%;">
+                        <div class="modal-body d-flex justify-content-center flex-column align-items-center"
+                            style="background-color: #dcac7b25;">
+                            <img :src="listaModalDetalles.imagen" :alt="listaModalDetalles.producto"
+                                style="width: 80%;">
                             <p style="text-align: center; margin-top: 1rem;">
-                            {{listaModalDetalles.descripcion}}
+                                {{listaModalDetalles.descripcion}}
                             </p>
                             <!-- {{listaModalDetalles}} -->
                             <div class="d-flex justify-content-between" style="width: 90%;">
-                                <p v-if="listaModalDetalles.disponibles > 0">Cantidad disponible: {{listaModalDetalles.disponibles}}</p>
+                                <p v-if="listaModalDetalles.disponibles > 0">Cantidad disponible:
+                                    {{listaModalDetalles.disponibles}}</p>
                                 <p v-else style="color: grey;">No quedan disponibles</p>
                                 <p>Precio: $ {{listaModalDetalles.precio}}</p>
                             </div>
-                            
+
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-ligth" data-bs-dismiss="modal">Cerrar</button>
+                        <div class="modal-footer" style="background-color: #fcbcbc6e;">
+                            <button type="button" class="btn btn-ligth" data-bs-dismiss="modal"
+                                style="font-weight: bolder;">Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -162,7 +179,8 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-ligth" data-bs-dismiss="modal"
-                                        v-on:click="borrarFavoritos" style="color: red; font-weight: bolder;">Vaciar carrito</button>
+                                        v-on:click="borrarFavoritos" style="color: red; font-weight: bolder;">Vaciar
+                                        carrito</button>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between align-items-center"
@@ -172,7 +190,8 @@
                             </div>
                         </template>
                         <template v-else>
-                            <p style="width: 100%; margin: 0; text-align: center; color: red; font-weight: bolder;">No tienes ningun producto en tu carrito</p>
+                            <p style="width: 100%; margin: 0; text-align: center; color: red; font-weight: bolder;">No
+                                tienes ningun producto en tu carrito</p>
                         </template>
                     </div>
                 </div>
@@ -233,15 +252,15 @@
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header" style="background-color: #fcbcbc6e;">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Suscripcion Exitosa</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" style="background-color: #dcac7b25;">
                             <p>Gracias por tu suscripcion. A partir de ahora recibiras todas nuestras novedades.</p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div class="modal-footer" style="background-color: #fcbcbc6e;">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -266,11 +285,11 @@
             </p>
         </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-<script src="./assets/scripts/message.js"></script>
-<script src="./assets/scripts/farmacia.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./assets/scripts/message.js"></script>
+    <script src="./assets/scripts/farmacia.js"></script>
 </body>
 
 </html>
