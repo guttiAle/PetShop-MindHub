@@ -64,7 +64,7 @@
         </div>
         <div class="p-4 d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-1" style="width: 90vw;">
-                <div v-for="tarjeta of productosFiltrados" class="card"
+                <div v-if="productosFiltrados.length > 0" v-for="tarjeta of productosFiltrados" class="card"
                     style="width: 19rem; height: 27rem; align-items: center; justify-content: space-between;">
                     <div class="d-flex align-items-center justify-content-center">
                         <img :src="tarjeta.imagen" class="card-img-top" :alt="tarjeta.producto" style="height: 17rem;">
@@ -99,6 +99,9 @@
                             </label>
                         </div>
                     </div>
+                </div>
+                <div v-else style="height: 50vh;">
+                    <h1>No hay coincidencias</h1>
                 </div>
             </div>
 
