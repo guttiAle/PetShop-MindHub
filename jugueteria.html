@@ -35,9 +35,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link " aria-current="page" href="#">Inicio</a>
-                        <a class="nav-link" href="#">Contacto</a>
-                        <a class="nav-link" href="#">Farmacia</a>
+                        <a class="nav-link " aria-current="page" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./contact.html">Contacto</a>
+                        <a class="nav-link" href="./farmacia.html">Farmacia</a>
                         <a class="nav-link active" href="#">Juguetes</a>
                         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight" style="border: none; background-color: transparent;"><img
@@ -157,7 +157,7 @@
                             <div
                                 style=" height: 75vh; display: flex; flex-direction: column; justify-content: space-between;">
                                 <div>
-                                    <div v-for="tarjeta of productosFiltrados" style="background-color: #dcac7b55;">
+                                    <div v-for="tarjeta of todasLasTarjetas" style="background-color: #dcac7b55;">
                                         <div v-if="favoritos.includes( tarjeta.producto )">
                                             <div
                                                 style="border: 1px solid rgba(91, 90, 90, 0.334); height: 4rem; width: 100%; margin-top: 1rem; display: flex;">

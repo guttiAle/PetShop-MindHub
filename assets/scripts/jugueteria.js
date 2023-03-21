@@ -3,6 +3,7 @@ const app = createApp({
     data(){
         return{
             tarjetasJugueteria : [],
+            todasLasTarjetas:[],
             favoritos : [],
             productosFiltrados : [],
             valorBusqueda : '',
@@ -14,6 +15,7 @@ const app = createApp({
             .then( response => response.json() )
             .then( data => { 
                 let separadorPorCategoria = data.filter(elemento => elemento.categoria == "jugueteria")
+                this.todasLasTarjetas = data
                 this.tarjetasJugueteria = separadorPorCategoria
                 this.productosFiltrados = this.tarjetasJugueteria
                 this.getData()
@@ -44,7 +46,7 @@ const app = createApp({
         },
         sumarPrecios(){
             let contador = 0
-            for (let i of this.tarjetasJugueteria){
+            for (let i of this.todasLasTarjetas){
                 if(this.favoritos.includes(i.producto)){
                     contador += i.precio
                 }
