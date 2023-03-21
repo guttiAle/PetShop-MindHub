@@ -5,7 +5,8 @@ const app = createApp({
             tarjetasJugueteria : [],
             favoritos : [],
             productosFiltrados : [],
-            valorBusqueda : ''
+            valorBusqueda : '',
+            listaModalDetalles : []
         }
     },
     created(){
@@ -25,6 +26,14 @@ const app = createApp({
         borrarFavoritos(){
             this.favoritos = []
         },
+        mostrarDetails(valor){
+            // console.log(valor);
+            for (let i of this.tarjetasJugueteria){
+                if(valor == i.producto){
+                    this.listaModalDetalles = i
+                }
+            }
+        }
     },
     computed : {
         filtro(){

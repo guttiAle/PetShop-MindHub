@@ -88,8 +88,10 @@
                                     <p style="border: 2px solid red; border-radius: 10px; padding: 0.2rem; margin: 0;">
                                         Ultimas unidades</p>
                                 </div>
-                                <a :href="'./details.html?id='+tarjeta._id" class="btn btn-light"
-                                    style="font-weight: bold;">+INFO</a>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-weight: bold;" v-on:click="mostrarDetails(tarjeta.producto)">
+                                +INFO
+                            </button>
                             </div>
                             <div v-if="tarjeta.disponibles > 0">
                                 <input type="checkbox" class="btn-check" v-model="favoritos" :value="tarjeta.producto"
@@ -99,6 +101,32 @@
                                     <img src="./assets/image/logo-carrito.png" alt="" style="width: 2rem;">
                                 </label>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #fcbcbc6e;">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: bolder;">{{listaModalDetalles.producto}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center flex-column align-items-center" style="background-color: #dcac7b25;">
+                            <img :src="listaModalDetalles.imagen" :alt="listaModalDetalles.producto" style="width: 80%;">
+                            <p style="text-align: center; margin-top: 1rem;">
+                            {{listaModalDetalles.descripcion}}
+                            </p>
+                            <div class="d-flex justify-content-between" style="width: 90%;">
+                                <p v-if="listaModalDetalles.disponibles > 0">Cantidad disponible: {{listaModalDetalles.disponibles}}</p>
+                                <p v-else style="color: grey;">No quedan disponibles</p>
+                                <p>Precio: $ {{listaModalDetalles.precio}}</p>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer" style="background-color: #fcbcbc6e;">
+                            <button type="button" class="btn btn-ligth" data-bs-dismiss="modal" style="font-weight: bolder;">Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -219,15 +247,15 @@
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Suscripcion Exitosa</h1>
+                        <div class="modal-header" style="background-color: #fcbcbc6e;">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" >Suscripcion Exitosa</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" style="background-color: #dcac7b25;">
                             <p>Gracias por tu suscripcion. A partir de ahora recibiras todas nuestras novedades.</p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div class="modal-footer" style="background-color: #fcbcbc6e;">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
