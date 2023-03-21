@@ -20,12 +20,6 @@ main {
     border-bottom: #ccacb4 double 4px;
 }
 
-.banner-jugueteria {
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
-    box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
-}
-
 .banner-busqueda {
     -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
     -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);

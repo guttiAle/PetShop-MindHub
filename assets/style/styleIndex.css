@@ -3,29 +3,26 @@
 .color3 { #5c2a35 };
 .color4 { #a4765e };
 .color5 { #d6b8b9 }; */
-* {
+*{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 }
 
-#cajaDeInicio {
+#cajaDeInicio{
     background-color: #fcbcbc6e !important;
 }
 
-.nav-link:hover {
+.nav-link:hover{
     transform: scale(1.1);
 }
-
-main {
+main{
     background-color: #dcac7b2a;
 }
-
-h2 {
-    font-weight: bold;
+h2{
+    font-weight:bold;
 }
-
-.imgCarrousel1 {
-    background-repeat: no-repeat;
+.imgCarrousel1{
+    background-repeat: no-repeat;    
     height: 65vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel1.png);
@@ -33,9 +30,8 @@ h2 {
     background-position-y: 20%;
     background-size: 100%;
 }
-
-.imgCarrousel2 {
-    background-repeat: no-repeat;
+.imgCarrousel2{
+    background-repeat: no-repeat;    
     height: 65vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel2.png);
@@ -43,9 +39,8 @@ h2 {
     background-position-y: 20%;
     background-size: 100%;
 }
-
-.imgCarrousel3 {
-    background-repeat: no-repeat;
+.imgCarrousel3{
+    background-repeat: no-repeat;    
     height: 65vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel3.png);
@@ -53,44 +48,19 @@ h2 {
     background-position-y: 20%;
     background-size: 100%;
 }
-
-.imgCONTACTO,
-.imgJUGUETERIA,
-.imgFARMACIA {
+.imgCONTACTO, .imgJUGUETERIA, .imgFARMACIA{
     border-radius: 10%;
 }
-
-.clinica,
-.peluqueria {
+.clinica, .peluqueria{
     flex-wrap: wrap;
-}
-
-#caja-tarjetas {
-    width: 30vh;
-}
-
-footer {
-    border-top: #ccacb4 double 4px;
-    background-color: #fcbcbc6e;
-}
-
-.tarjetas {
-    height: 2rem
-}
-
-@media only screen and (min-width: 1024px) {
-
-    .clinica,
-    .peluqueria {
-        flex-wrap: nowrap;
     }
+@media only screen and (min-width: 1024px) {
+    .clinica, .peluqueria{
+        flex-wrap:nowrap;
+        }
 }
-
 @media only screen and (max-width: 767px) {
-
-    .imgCONTACTO,
-    .imgJUGUETERIA,
-    .imgFARMACIA {
+    .imgCONTACTO, .imgJUGUETERIA, .imgFARMACIA{
         flex-wrap: wrap;
     }
 }

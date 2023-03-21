@@ -64,7 +64,7 @@
         </div>
         <div class="p-4 d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-1" style="width: 90vw;">
-                <div v-for="tarjeta of productosFiltrados" class="card"
+                <div v-if="productosFiltrados.length > 0" v-for="tarjeta of productosFiltrados" class="card"
                     style="width: 19rem; height: 27rem; align-items: center; justify-content: space-between;">
                     <div class="d-flex align-items-center justify-content-center">
                         <img :src="tarjeta.imagen" class="card-img-top" :alt="tarjeta.producto" style="height: 17rem;">
@@ -99,6 +99,9 @@
                             </label>
                         </div>
                     </div>
+                </div>
+                <div v-else style="height: 50vh;">
+                    <p style="font-size: 200%;">No hay coincidencias</p>
                 </div>
             </div>
 
@@ -154,7 +157,7 @@
                             <div
                                 style=" height: 75vh; display: flex; flex-direction: column; justify-content: space-between;">
                                 <div>
-                                    <div v-for="tarjeta of productosFiltrados" style="background-color: #dcac7b55;">
+                                    <div v-for="tarjeta of todasLasTarjetas" style="background-color: #dcac7b55;">
                                         <div v-if="favoritos.includes( tarjeta.producto )">
                                             <div
                                                 style="border: 1px solid rgba(91, 90, 90, 0.334); height: 4rem; width: 100%; margin-top: 1rem; display: flex;">
@@ -202,7 +205,7 @@
     <!-- FOOTER -->
     <footer class="d-flex justify-content-around p-2 flex-wrap gap-2">
         <div id="caja-tarjetas" style="width: 42vh;">
-            <p style="text-align: center;font-weight: bold;">Metodos de pago:</p>
+            <p style="text-align: center;">Metodos de pago:</p>
             <img src="./assets/image/tarjeta1.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta2.png" alt="..." class="tarjetas">
             <img src="./assets/image/tarjeta3.png" alt="..." class="tarjetas">
@@ -240,8 +243,7 @@
                     </svg></a>
             </div>
             <form action="./show_data.html" class="d-flex flex-column" style="width: 42vh;">
-                <label for="suscripcion" class="d-flex justify-content-center" style="font-weight: bold;">Recibi
-                    nuestras novedades</label>
+                <label for="suscripcion" class="d-flex justify-content-center">Recibi nuestras novedades</label>
                 <input type="email" id="suscripcion" placeholder="nombre@ejemplo.com" name="suscripcion" required>
                 <!-- Button trigger modal -->
                 <button type="button" data-bs-toggle="modal" data-bs-target="#modalSuscripcion">
@@ -267,28 +269,23 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-column align-items-center" style="width: 45vh;">
-            <p style="text-align: center;margin: 0; font-weight: bold;">Equipo:</p>
-            <div class="d-flex justify-content-between" style="width: 42vh;">
-                <p style="margin: 0;">
-                    <img src="./assets/image/logo-untonio.png" alt="" style="width: 3rem;">
-                    Agustin M.
-                </p>
-                <p style="margin: 0;">
-                    <img src="./assets/image/logo-bellota.png" alt="" style="width: 3rem;">
-                    Eugenia G.
-                </p>
-            </div>
-            <div class="d-flex justify-content-between" style="width: 42vh;">
-                <p style="margin: 0;">
-                    <img src="./assets/image/logo-burbuja.png" alt="" style="width: 3rem;">
-                    Jennifer M.
-                </p>
-                <p style="margin: 0;">
-                    <img src="./assets/image/logo-bombon.png" alt="" style="width: 3rem;">
-                    Facundo R.
-                </p>
-            </div>
+        <div class="d-flex flex-column align-items-center" style="width: 42vh;">
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-untonio.png" alt="" style="width: 3rem;">
+                Agustin M.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-bombon.png" alt="" style="width: 3rem;">
+                Eugenia G.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-burbuja.png" alt="" style="width: 3rem;">
+                Jennifer M.
+            </p>
+            <p style="margin: 0;">
+                <img src="./assets/image/logo-bellota.png" alt="" style="width: 3rem;padding: 0.5rem;">
+                Facundo R.
+            </p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
