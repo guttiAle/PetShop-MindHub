@@ -49,14 +49,14 @@
     </header>
     <main>
         <div class="d-flex justify-content-center">
-            <img src="./assets/image/banner-jugueteria.png" alt="" class="img-fluid banner-jugueteria"
-                style="width: 90vw;">
+            <img src="./assets/image/banner-jugueteria.png" alt="" class="img-fluid banner-jugueteria "
+                style="width: 90vw;border-bottom-right-radius: 2rem; border-bottom-left-radius: 2rem;">
         </div>
         <div id="app">
             {{handleFav}}
-            <div class="d-flex justify-content-center m-auto banner-busqueda"
-                style="height: 5rem; width: 90vw; border-bottom-right-radius: 2rem; border-bottom-left-radius: 2rem;">
-                <div class="input-group align-items-center" style="width: 15rem;" id="content-search">
+            <div class="d-flex justify-content-center m-auto banner-busqueda mt-3"
+                style="height: 5rem; width: 90vw; border-radius: 2rem;">
+                <div class="input-group align-items-center" style="width: 15rem; " id="content-search">
                     <div class="input-group-text" id="btnGroupAddon">🔎</div>
                     <input v-model="valorBusqueda" type="text" class="form-control" id="search-bar"
                         placeholder="Ejemplo: pelota" aria-label="Input group example" aria-describedby="btnGroupAddon">
