@@ -1,47 +1,51 @@
-/* .color1 { #dcab7b };
-.color2 { #fcbcbc };
-.color3 { #5c2a35 };
-.color4 { #a4765e };
-.color5 { #d6b8b9 }; */
-*{
+* {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    /* background-color: #fcbcbc6e !important; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#cajaDeInicio{
+#cajaDeInicio {
     background-color: #fcbcbc6e !important;
+    border-bottom: #ccacb4 double 4px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     transform: scale(1.1);
 }
 
-#banner-1{
-    background-color: #E9EDF0;
+.banner-contacto {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
+    box-shadow: 0px 0px 20px 0px rgba(220, 172, 123, 0.7);
 }
 
-main{
+main {
     background-color: #dcac7b2a;
 }
 
-#banner-2{
+#banner-2 {
     background-color: #ECD2CA;
 }
 
-.tarjetas{
+.tarjetas {
     height: 2rem
 }
 
+.btn-outline-secondary {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
+    box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
+}
 
-footer{
+footer {
     border-top: #ccacb4 double 4px;
     background-color: #fcbcbc6e !important;
 }
 
-@media only screen and (min-width: 1024px){
-    form{
+@media only screen and (min-width: 1024px) {
+    form {
         width: 50vh;
     }
 }
-

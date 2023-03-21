@@ -1,66 +1,102 @@
-/* .color1 { #dcab7b };
-.color2 { #fcbcbc };
-.color3 { #5c2a35 };
-.color4 { #a4765e };
-.color5 { #d6b8b9 }; */
-*{
+* {
     font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cajaDeInicio {
+    background-color: #fcbcbc6e !important;
+    border-bottom: #ccacb4 double 4px;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+main {
+    background-color: #dcac7b2a;
+}
+
+h2 {
     font-weight: bold;
 }
 
-#cajaDeInicio{
-    background-color: #fcbcbc6e !important;
+.btn-outline-secondary {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
+    box-shadow: 0px 0px 10px 0px rgba(220, 172, 123, 0.7);
 }
 
-.nav-link:hover{
-    transform: scale(1.1);
-}
-main{
-    background-color: #dcac7b2a;
-}
-h2{
-    font-weight:bold;
-}
-.imgCarrousel1{
-    background-repeat: no-repeat;    
-    height: 65vw;
+.imgCarrousel1 {
+    background-repeat: no-repeat;
+    height: 55vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel1.png);
     background-position-x: 90%;
     background-position-y: 20%;
     background-size: 100%;
 }
-.imgCarrousel2{
-    background-repeat: no-repeat;    
-    height: 65vw;
+
+.imgCarrousel2 {
+    background-repeat: no-repeat;
+    height: 55vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel2.png);
     background-position-x: 90%;
     background-position-y: 20%;
     background-size: 100%;
 }
-.imgCarrousel3{
-    background-repeat: no-repeat;    
-    height: 65vw;
+
+.imgCarrousel3 {
+    background-repeat: no-repeat;
+    height: 55vw;
     width: 100%;
     background-image: url(/assets/image/Carrousel3.png);
     background-position-x: 90%;
     background-position-y: 20%;
     background-size: 100%;
 }
-.imgCONTACTO, .imgJUGUETERIA, .imgFARMACIA{
-    border-radius: 10%;
+
+.imgCONTACTO,
+.imgJUGUETERIA,
+.imgFARMACIA {
+    border-radius: 3rem;
 }
-.clinica, .peluqueria{
+
+.clinica,
+.peluqueria {
     flex-wrap: wrap;
-    }
-@media only screen and (min-width: 1024px) {
-    .clinica, .peluqueria{
-        flex-wrap:nowrap;
-        }
 }
+
+#caja-tarjetas {
+    width: 30vh;
+}
+
+footer {
+    border-top: #ccacb4 double 4px;
+    background-color: #fcbcbc6e;
+}
+
+.tarjetas {
+    height: 2rem
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .clinica,
+    .peluqueria {
+        flex-wrap: nowrap;
+    }
+}
+
 @media only screen and (max-width: 767px) {
-    .imgCONTACTO, .imgJUGUETERIA, .imgFARMACIA{
+
+    .imgCONTACTO,
+    .imgJUGUETERIA,
+    .imgFARMACIA {
         flex-wrap: wrap;
     }
 }
