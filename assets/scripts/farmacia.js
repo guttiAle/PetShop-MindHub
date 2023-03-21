@@ -3,11 +3,11 @@ const app = createApp({
     data() {
         return {
             tarjetasFarmacia: [],
-            todasLasTarjetas:[],
-            favoritos : [],
-            productosFiltrados : [],
-            valorBusqueda : '',
-            listaModalDetalles : []
+            todasLasTarjetas: [],
+            favoritos: [],
+            productosFiltrados: [],
+            valorBusqueda: '',
+            listaModalDetalles: []
         }
     },
     created() {
@@ -21,32 +21,32 @@ const app = createApp({
                 this.getData()
             }
             )
-            .catch( err => console.log( err ) )
-            this.favoritos = JSON.parse( localStorage.getItem('favoritos') ) || []      
+            .catch(err => console.log(err))
+        this.favoritos = JSON.parse(localStorage.getItem('favoritos')) || []
     },
     methods: {
-        borrarFavoritos(){
+        borrarFavoritos() {
             this.favoritos = []
         },
-        mostrarDetails(valor){
-            for (let i of this.tarjetasFarmacia){
-                if(valor == i.producto){
+        mostrarDetails(valor) {
+            for (let i of this.tarjetasFarmacia) {
+                if (valor == i.producto) {
                     this.listaModalDetalles = i
                 }
             }
         }
     },
-    computed : {
-        filtro(){
+    computed: {
+        filtro() {
             this.productosFiltrados = this.tarjetasFarmacia.filter(tarjeta => tarjeta.producto.toLowerCase().includes(this.valorBusqueda.toLowerCase()))
         },
-        handleFav(){
-            localStorage.setItem( 'favoritos', JSON.stringify( this.favoritos ) )
+        handleFav() {
+            localStorage.setItem('favoritos', JSON.stringify(this.favoritos))
         },
-        sumarPrecios(){
+        sumarPrecios() {
             let contador = 0
-            for (let i of this.todasLasTarjetas){
-                if(this.favoritos.includes(i.producto)){
+            for (let i of this.todasLasTarjetas) {
+                if (this.favoritos.includes(i.producto)) {
                     contador += i.precio
                 }
             }
